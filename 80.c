@@ -26,7 +26,7 @@ int main(){
       mid = min;
       min = csqu;
     }
-    if(mid == min)
+    if(mid == min || max == mid || max == min)
       printf("isosceles\n");
     else if(mid + min == max)
       printf("right\n");
