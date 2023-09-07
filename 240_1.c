@@ -32,7 +32,7 @@ int main(){
         printf("square\n");
       else 
         printf("diamond\n");
-    } else if (a + b == e && b + c == f)
+    } else if (a + b == e && b + c == f && c + d == e)
       printf("rectangle\n");
     else
       printf("other\n");
