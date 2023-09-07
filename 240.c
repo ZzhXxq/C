@@ -40,7 +40,7 @@ int main(){
       if(a + b == e && b + c == f)
         printf("square");
       else
-        print("diamond")
+        printf("diamond");
     } else if(a + b == e && b + c == f)
       printf("rectangle");
     else
