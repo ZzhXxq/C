@@ -9,6 +9,7 @@ int main(){
     if (month < 1 || month > 12){
       printf("-1\n");
       continue;
+    }
     switch (month){
       case 1: case 3: case 5: case 7: case 8: case 10: case 12:
         if (day < 1 || day > 31){
@@ -30,9 +31,7 @@ int main(){
             continue;
           }
         }
-    }
-
-      
+    }   
     int sum = day - 1;
     for(int j = 1; j < month; j++){  
       switch (j){
