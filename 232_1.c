@@ -6,7 +6,7 @@ int main(){
   for (int i = 0; i < n; i++){
     int month, day;
     scanf("%d%d", &month, &day);
-    int ans = day - 1;
+    int ans = week + day - 1;
     if (month > 12 || month < 1){
       printf("-1\n");
       continue;
@@ -31,7 +31,7 @@ int main(){
       else{
         if (day < 1 || day > sumday)
           ans = -2;
-        else 
+        else
           ans %= 7;
       }
     }
