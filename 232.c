@@ -26,11 +26,11 @@ int main(){
           if (day < 1 || day > 29){
             printf("-2\n");
             continue;
-          } else if (day < 1 || day > 28){
+          }
+        }else if (day < 1 || day > 28){
             printf("-2\n");
             continue;
           }
-        }
     }   
     int sum = day - 1;
     for(int j = 1; j < month; j++){  
