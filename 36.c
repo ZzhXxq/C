@@ -29,8 +29,10 @@ int main(){
       if (day == 6)
         printf("\n");
       day = (day + 1) % 7;
-      printf("\n=====================\n");
     }
+    if (day != 0)
+      printf("\n");
+    printf("=====================\n");
   }
     return 0;
   
