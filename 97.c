@@ -18,12 +18,17 @@ int main(){
     int d = (bx > px[p]? bx - px[p] : px[p] - bx);
     d += (by > py[p]? by - py[p] : py[p] - by);
     for (int i = 0; i < n; i++){
+      if (cnow[i] == cmost[i])
+        continue;
       int dnew = (bx > px[i]? bx - px[i] : px[i] - bx);
       dnew += (by > py[i]? by - py[i] : py[i] - by);
-      if(d > dnew && cnow[i] < cmost[i]){
+      if(d > dnew){
         d = dnew;
         p = i;
-      }  
+      } else if (d == dnew && px[i] < px[p])
+        p = i;
+      else if (d == dnew && px[i] == px[p] && py[i] < py[p])
+        p = i;
     }
     cnow[p]++;
   }
