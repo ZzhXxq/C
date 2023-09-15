@@ -28,6 +28,11 @@ int main(){
     e = -i;
     d = a - e - f;
   }
+  if (d > f){
+    int tmp = d;
+    d = f;
+    f = tmp;
+  }
   printf("%d %d %d", d, e, f); 
   return 0;
 }
