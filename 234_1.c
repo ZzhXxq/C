@@ -6,7 +6,7 @@ int main(){
   int d, e, f;
   int count = 0;
   for (long long int i = -100000; i <= 100000; i++){
-    if (abs(i) > abs(c))
+    if (c != 0 && abs(i) > abs(c))
       continue;
     if(i == 0 || c % i == 0){
       if ((i*i*i + a*i*i + b*i + c) == 0){
@@ -24,7 +24,7 @@ int main(){
       printf("%d %d %d", d, e, f);
     else if (count == 1)
       printf("%d %d %d", f, f, f);
-    else if (f * f * e == c)
+    else if (f + f + e == a)
       printf("%d %d %d", e, f, f);
     else
       printf("%d %d %d", e, e, f);
