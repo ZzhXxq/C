@@ -11,22 +11,10 @@ int main(){
   scanf("%d", &m);
   int count[mSIZE] = {0};
   for (int i = 0; i < n; i++){
-    bool noFound = true;
-    for (int j = 0; j < m && noFound; j++)
-      if (num[i] % m == j){
-        count[j]++;
-        noFound = false;
-      }
+    int j = num[i] % m;
+    count[j]++;
   }
-  for (int j = 0; j < m; j++)
-    printf("%d\n", count[j]);
-  /*for (int j = 0; j < m; j++){
-    int count = 0;
-    for (int i = 0; i < n; i++){
-      if (num[i] % m == j)
-        count++;
-    }
-    printf("%d\n", count);
-  }*/
+  for (int i = 0; i < m; i++)
+    printf("%d\n", count[i]);
   return 0;
 }
