@@ -18,8 +18,8 @@ int main(){
   }
   for (int r = 0; r < R; r++){
     for (int c = 0; c < C; c++)
-      if((r != (R - 1) && num[r][c] < num[r+1][c]) || (r != 0 && num[r][c] < num[r-1][c])
-         || (c != 0 && num[r][c] < num[r][c-1]) || (c != (C - 1) && num[r][c] < num[r][c+1]))
+      if((r != (R - 1) && num[r][c] <= num[r+1][c]) || (r != 0 && num[r][c] <= num[r-1][c])
+         || (c != 0 && num[r][c] <= num[r][c-1]) || (c != (C - 1) && num[r][c] <= num[r][c+1]))
         large[r][c] = false;
   }
 
