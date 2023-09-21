@@ -11,7 +11,7 @@ int main(){
   int count = 1;
   int win = 0;
   for (int i = 0; i < n && (win == 0) && count <= 9; i++){
-    if (x[i] >= 3 && x[i] < 0 && y[i] >= 3 && y[i] < 0 || map[x[i]][y[i]] != 0)
+    if (x[i] >= 3 || x[i] < 0 || y[i] >= 3 || y[i] < 0 || map[x[i]][y[i]] != 0)
       continue;
     if (count % 2 == 1)
       map[x[i]][y[i]] = 1;
