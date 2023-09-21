@@ -2,12 +2,15 @@
 #include <stdbool.h>
 #define PLAYER 10
 #define LENGTH 256
+#define NAME 64
 
 int main(){
   int n, m;
   scanf("%d%d", &n, &m);
+  /*未完成：宣告字串*/
   int player[PLAYER][LENGTH][LENGTH];
   for (int p = 0; p < n; p++){
+    /*未完成：輸入名字*/  
     for (int r = 0; r < m; r++){
       for (int c = 0; c < m; c++)
         scanf("%d", &player[p][r][c]);
@@ -27,19 +30,21 @@ int main(){
         }
       }
     }
-    for (int p = 0; p < n; p++){
+    /*for (int p = 0; p < n; p++){
       bool chose = true;
       for (int r = 0; r < m; r++){
-        bool chose = true; 
+        chose = true; 
         for (int c = 0; c < m && chose; c++){
-          if (player[p][r][c] != 0)
+          if (player[p][r][c] == 0)
             chose = false;
         }
       }
-      if (chose){
-        printf("%d ", num, name[p]);
+      if (chose && !bingo){
+        printf("%d ", num);
         bingo = true;
-      }  
+      }*/ //還有大問題，無法判斷bingo QAQ
+      /*if (chose)
+        未完成：輸出名字*/
     }
   }
   return 0;
