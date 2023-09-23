@@ -30,21 +30,21 @@ int main(){
         }
       }
     }
-    /*for (int p = 0; p < n; p++){
-      bool chose = true;
+    for (int p = 0; p < n; p++){
+      int chose = 0;
       for (int r = 0; r < m; r++){
-        chose = true; 
-        for (int c = 0; c < m && chose; c++){
-          if (player[p][r][c] == 0)
-            chose = false;
+        chose = 0; 
+        for (int c = 0; c < m; c++)
+          chose += player[p][r][c];
+        if (chose == 0 && !bingo){
+          printf("%d ", num);
+          bingo = true;
         }
+        if (chose == 0){
+          /*未完成：輸出名字*/
+          break;
+        }    
       }
-      if (chose && !bingo){
-        printf("%d ", num);
-        bingo = true;
-      }*/ //還有大問題，無法判斷bingo QAQ
-      /*if (chose)
-        未完成：輸出名字*/
     }
   }
   return 0;
