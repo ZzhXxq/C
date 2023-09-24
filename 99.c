@@ -88,6 +88,7 @@ int main(){
       }
       if (chose == 0)
         /*未完成：輸出名字*/
+        continue;
     }
   }
   return 0;
