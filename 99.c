@@ -30,21 +30,64 @@ int main(){
         }
       }
     }
+    //看看能否縮短
+    
     for (int p = 0; p < n; p++){
       int chose = 0;
       for (int r = 0; r < m; r++){
         chose = 0; 
         for (int c = 0; c < m; c++)
           chose += player[p][r][c];
-        if (chose == 0 && !bingo){
+        if (chose == 0)
+          break;
+      }
+      if (chose == 0 && !bingo){
           printf("%d ", num);
           bingo = true;
-        }
-        if (chose == 0){
-          /*未完成：輸出名字*/
-          break;
-        }    
       }
+      if (chose == 0){
+        //輸出name
+        continue;
+      }
+      for (int c = 0; c < m; c++){
+        chose = 0; 
+        for (int r = 0; r < m; r++)
+          chose += player[p][r][c];
+        if (chose == 0)
+          break;
+      }
+      if (chose == 0 && !bingo){
+          printf("%d ", num);
+          bingo = true;
+      }
+      if (chose == 0){
+        //輸出name
+        continue;
+      }
+      for (int c = 0; c < m; c++){
+        chose = 0; 
+        int r = c;
+        chose += player[p][r][c];
+      }
+      if (chose == 0 && !bingo){
+          printf("%d ", num);
+          bingo = true;
+      }
+      if (chose == 0){
+        /*未完成：輸出名字*/
+        continue;
+      }
+      for (int c = 0; c < m; c++){
+        chose = 0; 
+        int r = m - c - 1;
+        chose += player[p][r][c];
+      }
+      if (chose == 0 && !bingo){
+          printf("%d ", num);
+          bingo = true;
+      }
+      if (chose == 0)
+        /*未完成：輸出名字*/
     }
   }
   return 0;
