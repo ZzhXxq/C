@@ -20,16 +20,13 @@ int main(){
   for (int i = 0; i < m * m && !bingo; i++){
     int num;
     scanf("%d", &num);
-    for (int p = 0; p < n; p++){
-      for (int r = 0; r < m; r++){
-        for (int c = 0; c < m; c++){
+    for (int p = 0; p < n; p++)
+      for (int r = 0; r < m; r++)
+        for (int c = 0; c < m; c++)
           if (num == player[p][r][c]){
             player[p][r][c] = 0;
             break;
           }
-        }
-      }
-    }
     //看看能否縮短
     
     for (int p = 0; p < n; p++){
@@ -64,8 +61,8 @@ int main(){
         //輸出name
         continue;
       }
-      for (int c = 0; c < m; c++){
-        chose = 0; 
+      chose = 0;
+      for (int c = 0; c < m; c++){ 
         int r = c;
         chose += player[p][r][c];
       }
@@ -77,8 +74,8 @@ int main(){
         /*未完成：輸出名字*/
         continue;
       }
+      chose = 0;
       for (int c = 0; c < m; c++){
-        chose = 0; 
         int r = m - c - 1;
         chose += player[p][r][c];
       }
