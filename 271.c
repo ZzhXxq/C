@@ -18,6 +18,6 @@ int main(){
     for (int j = 0; j < m; j++)
       mul[i + j] += poly[0][i] * poly[1][j];
   for (int i = 0; i < n + m - 1; i++)
-    printf("%d ", mul[i]);
+    printf("%d%c", mul[i], (i == (n + m - 2)?) '\n': ' ');
   return 0;
 }
