@@ -33,13 +33,13 @@ int main(){
       y += dy[dir];
     }
     if(x < 0)
-      printf();
+      printf("%d", D - y + 2 * W + D - 1);
     else if (x >= W)
-      printf();
+      printf("%d", y + W);
     else if (y < 0)
-      printf();
+      printf("%d", x);
     else
-      printf();
+      printf("%d", W - x + W + D - 1);
   }
   return 0;
 }
